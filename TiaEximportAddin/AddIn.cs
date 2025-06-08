@@ -46,6 +46,9 @@ namespace TiaEximportAddin
                         case PlcBlock plcBlock:
                             plcBlock.Export(exportFileInfo, exportOptions);
                             break;
+                        case PlcType plcType:
+                            plcType.Export(exportFileInfo, exportOptions);
+                            break;
                         case PlcTagTable plcTagTable:
                             plcTagTable.Export(exportFileInfo, exportOptions);
                             break;
@@ -79,6 +82,7 @@ namespace TiaEximportAddin
                     item is PlcTagTable ||
                     item is PlcForceTable ||
                     item is PlcWatchTable ||
+                    item is PlcType ||
                     item is TagTable ||
                     item is TagFolder ||
                     item is VBScript ||
